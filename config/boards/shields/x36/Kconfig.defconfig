@@ -1,0 +1,9 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_x36
+
+config ZMK_KEYBOARD_NAME
+    default "x36"
+
+endif
