@@ -65,6 +65,11 @@
             bindings = <&kp LSHIFT>;
             key-positions = <29 28>;
         };
+
+        WAVE {
+            bindings = <&kp GRAVE>;
+            key-positions = <0 1 2>;
+        };
     };
 
     keymap {
@@ -72,19 +77,10 @@
 
         default_layer {
             bindings = <
-  &kp Q  &kp W      &kp E        &kp R               &kp T                &kp Y           &kp U    &kp I      &kp O    &kp P
-  &kp A  &kp S      &kp D        &kp F               &kp G                &kp H           &kp J    &kp K      &kp L    &kp SEMI
-  &kp Z  &kp X      &kp C        &kp V               &kp B                &kp N           &kp M    &kp COMMA  &kp DOT  &kp FSLH
-         &lt 3 SQT  &lt 1 SPACE  &lt 2 LEFT_BRACKET  &lt 3 RIGHT_BRACKET  &kp LEFT_SHIFT  &kp SQT
-            >;
-        };
-
-        bt_control {
-            bindings = <
-  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)   &kp LS(NUMBER_6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)
-  &none             &kp LEFT_ARROW    &kp DEL           &kp RIGHT         &bt BT_CLR   &trans            &trans      &trans      &trans      &trans
-  &bt BT_SEL 3      &bt BT_SEL 2      &bt BT_SEL 1      &bt BT_SEL 0      &bootloader  &trans            &trans      &trans      &trans      &trans
-                    &none             &none             &none             &none        &trans            &trans
+  &kp Q  &kp W      &kp E        &kp R               &kp T                &kp Y                      &kp U          &kp I      &kp O    &kp P
+  &kp A  &kp S      &kp D        &kp F               &kp G                &kp H                      &kp J          &kp K      &kp L    &kp SEMI
+  &kp Z  &kp X      &kp C        &kp V               &kp B                &kp N                      &kp M          &kp COMMA  &kp DOT  &kp FSLH
+         &lt 2 SQT  &lt 2 SPACE  &lt 1 LEFT_BRACKET  &lt 2 RIGHT_BRACKET  &mt RIGHT_SHIFT BACKSPACE  &kp RIGHT_ALT
             >;
         };
 
@@ -103,6 +99,15 @@
   &kp LEFT  &kp DOWN      &kp RIGHT  &trans  &trans  &bootloader  &sys_reset  &trans  &trans  &trans
   &trans    &trans        &trans     &trans  &trans  &trans       &trans      &trans  &trans  &trans
             &sys_reset    &none      &trans  &trans  &trans       &trans
+            >;
+        };
+
+        bt_control {
+            bindings = <
+  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)   &kp LS(NUMBER_6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)
+  &none             &kp LEFT_ARROW    &kp DEL           &kp RIGHT         &bt BT_CLR   &trans            &trans      &trans      &trans      &trans
+  &bt BT_SEL 3      &bt BT_SEL 2      &bt BT_SEL 1      &bt BT_SEL 0      &bootloader  &trans            &trans      &trans      &trans      &trans
+                    &none             &none             &none             &none        &trans            &trans
             >;
         };
     };
