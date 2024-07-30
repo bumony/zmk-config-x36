@@ -4,5 +4,7 @@ name: x36
 type: shield
 url: https://github.com/Sifan6688
 requires: [pro_micro]
+exposes: [i2c_oled]
 features:
   - keys
+  - display
