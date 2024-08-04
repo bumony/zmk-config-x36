@@ -99,7 +99,7 @@
         ctrlA: ctrlA {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp>;
+            bindings = <&kp A>;
             label = "CTRLA";
         };
     };
