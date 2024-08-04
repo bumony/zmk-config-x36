@@ -86,6 +86,22 @@
             #binding-cells = <0>;
             bindings = <&lt 1 DELETE>, <&lt 2 DELETE>, <&lt 3 DELETE>;
         };
+
+        ctrl_a: ctrl_a {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CTRL_A";
+            #binding-cells = <0>;
+            bindings = <&kp A>, <&kp LCTRL>, <&kp LC(A)>;
+        };
+    };
+
+    macros {
+        ctrlA: ctrlA {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp>;
+            label = "CTRLA";
+        };
     };
 
     keymap {
@@ -93,10 +109,10 @@
 
         default_layer {
             bindings = <
-  &kp Q  &kp W      &kp E      &kp R     &kp T               &kp Y                      &kp U    &kp I      &kp O    &kp P
-  &kp A  &kp S      &kp D      &kp F     &kp G               &kp H                      &kp J    &kp K      &kp L    &kp SEMI
-  &kp Z  &kp X      &kp C      &kp V     &kp B               &kp N                      &kp M    &kp COMMA  &kp DOT  &kp FSLH
-         &lt 2 SQT  &kp SPACE  &command  &lt 1 LEFT_BRACKET  &mt RIGHT_SHIFT BACKSPACE  &layber
+  &kp Q    &kp W      &kp E      &kp R     &kp T               &kp Y                      &kp U    &kp I      &kp O    &kp P
+  &ctrl_a  &kp S      &kp D      &kp F     &kp G               &kp H                      &kp J    &kp K      &kp L    &kp SEMI
+  &kp Z    &kp X      &kp C      &kp V     &kp B               &kp N                      &kp M    &kp COMMA  &kp DOT  &kp FSLH
+           &lt 2 SQT  &kp SPACE  &command  &lt 1 LEFT_BRACKET  &mt RIGHT_SHIFT BACKSPACE  &layber
             >;
         };
 
